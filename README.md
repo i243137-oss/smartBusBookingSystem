@@ -15,6 +15,9 @@ A simple C++ application for managing bus bookings.
 - Windows OS
 - C++ compiler (for building from source)
 
+## Releases
+- v1.0.0 (2026-01-07): Initial release
+
 ---
 
-_Last updated: 2026-01-07T12:09:01.108Z_
+_Last updated: 2026-01-07T12:13:39.704Z_
