@@ -9,12 +9,16 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v3
+
       - name: Install g++
         run: sudo apt-get update && sudo apt-get install -y g++
-      - name: Build main.cpp
-        run: g++ -o main main.cpp
-      - name: Run executable
-        run: ./main
 
+      - name: Build main.cpp
+        run: g++ -std=c++17 -O2 -Wall -Wextra -o main main.cpp
+
+      # Send "3" to select "Exit" so the job doesn't wait for interactive input
+      - name: Run executable (non-interactive)
+        run: echo "3" | ./main
